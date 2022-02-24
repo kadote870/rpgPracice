@@ -1,0 +1,19 @@
+{
+  "name": "rpgpracice",
+  "version": "1.0.0",
+  "description": "rpg coding practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadote870/rpgPracice.git"
+  },
+  "author": "Człowiek Taboret",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kadote870/rpgPracice/issues"
+  },
+  "homepage": "https://github.com/kadote870/rpgPracice#readme"
+}
