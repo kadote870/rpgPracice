@@ -1,22 +1,26 @@
-const cechaWytrzymalosc = Math.floor((Math.random() * 5) + 1);
-const cechaSilaWoli = Math.floor((Math.random() * 5) + 1);
+const rollStat = () => {
+    return Math.floor((Math.random() * 5) + 1);
+}
+
+const cechaWytrzymalosc = rollStat();
+const cechaSilaWoli = rollStat();
 const kragZiemia = Math.min(cechaSilaWoli, cechaWytrzymalosc);
 
-const cechaZrecznosc = Math.floor((Math.random() * 5) + 1);
-const cechaInteligencja = Math.floor((Math.random() * 5) + 1);
+const cechaZrecznosc = rollStat();
+const cechaInteligencja = rollStat();
 const kragOgnien = Math.min(cechaZrecznosc, cechaInteligencja);
 
-const cechaSila = Math.floor((Math.random() * 5) + 1);
-const cechaSpostrzegawczosc = Math.floor((Math.random() * 5) + 1);
+const cechaSila = rollStat();
+const cechaSpostrzegawczosc = rollStat();
 const kragWoda = Math.min(cechaSila, cechaSpostrzegawczosc);
 
-const cechaRefleks = Math.floor((Math.random() * 5) + 1);
-const cechaIntuicja = Math.floor((Math.random() * 5) + 1);
+const cechaRefleks = rollStat();
+const cechaIntuicja = rollStat();
 const kragPowietrze = Math.min(cechaRefleks, cechaIntuicja);
 
-const kragPustka = Math.floor((Math.random() * 5) + 1);
+const kragPustka = rollStat();
 
-const umiejetnoscKenjutsu = Math.floor((Math.random() * 5) + 1);
+const umiejetnoscKenjutsu = rollStat();
 
 const katanaRoll = 3;
 const katanaKeep = 2;
