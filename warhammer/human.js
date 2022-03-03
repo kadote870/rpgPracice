@@ -2,22 +2,26 @@ const race = "Czlowiek";
 
 const stat20 = 20;
 
-const roll01 = Math.floor((Math.random() * 10) + 1);
-const roll02 = Math.floor((Math.random() * 10) + 1);
-const roll03 = Math.floor((Math.random() * 10) + 1);
-const roll04 = Math.floor((Math.random() * 10) + 1);
-const roll05 = Math.floor((Math.random() * 10) + 1);
-const roll06 = Math.floor((Math.random() * 10) + 1);
-const roll07 = Math.floor((Math.random() * 10) + 1);
-const roll08 = Math.floor((Math.random() * 10) + 1);
-const roll09 = Math.floor((Math.random() * 10) + 1);
-const roll10 = Math.floor((Math.random() * 10) + 1);
-const roll11 = Math.floor((Math.random() * 10) + 1);
-const roll12 = Math.floor((Math.random() * 10) + 1);
-const roll13 = Math.floor((Math.random() * 10) + 1);
-const roll14 = Math.floor((Math.random() * 10) + 1);
-const roll15 = Math.floor((Math.random() * 10) + 1);
-const roll16 = Math.floor((Math.random() * 10) + 1);
+const rollDice = () => {
+    return Math.floor((Math.random() * 10) + 1)
+}
+
+const roll01 = rollDice()
+const roll02 = rollDice()
+const roll03 = rollDice()
+const roll04 = rollDice()
+const roll05 = rollDice()
+const roll06 = rollDice()
+const roll07 = rollDice()
+const roll08 = rollDice()
+const roll09 = rollDice()
+const roll10 = rollDice()
+const roll11 = rollDice()
+const roll12 = rollDice()
+const roll13 = rollDice()
+const roll14 = rollDice()
+const roll15 = rollDice()
+const roll16 = rollDice()
 
 let statWW = roll01 + roll02 + stat20;
 let statUS = roll03 + roll04 + stat20;
