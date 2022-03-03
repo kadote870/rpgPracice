@@ -3,34 +3,17 @@ const race = "Czlowiek";
 const stat20 = 20;
 
 const rollDice = () => {
-    return Math.floor((Math.random() * 10) + 1)
+    return Math.floor((Math.random() * 10) + 1);
 }
 
-const roll01 = rollDice()
-const roll02 = rollDice()
-const roll03 = rollDice()
-const roll04 = rollDice()
-const roll05 = rollDice()
-const roll06 = rollDice()
-const roll07 = rollDice()
-const roll08 = rollDice()
-const roll09 = rollDice()
-const roll10 = rollDice()
-const roll11 = rollDice()
-const roll12 = rollDice()
-const roll13 = rollDice()
-const roll14 = rollDice()
-const roll15 = rollDice()
-const roll16 = rollDice()
-
-let statWW = roll01 + roll02 + stat20;
-let statUS = roll03 + roll04 + stat20;
-let statK = roll05 + roll06 + stat20;
-let statOdp = roll07 + roll08 + stat20;
-let statZr = roll09 + roll10 + stat20;
-let statInt = roll11 + roll12 + stat20;
-let statSW = roll13 + roll14 + stat20;
-let statOgd = roll15 + roll16 + stat20;
+let statWW = rollDice() + rollDice() + stat20;
+let statUS = rollDice() + rollDice() + stat20;
+let statK = rollDice() + rollDice() + stat20;
+let statOdp = rollDice() + rollDice() + stat20;
+let statZr = rollDice() + rollDice() + stat20;
+let statInt = rollDice() + rollDice() + stat20;
+let statSW = rollDice() + rollDice() + stat20;
+let statOgd = rollDice() + rollDice() + stat20;
 
 let statA = 1;
 let statS = statK.toString()[0];
