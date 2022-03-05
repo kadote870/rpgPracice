@@ -8,11 +8,13 @@ const character = {
 const statZyw = character.tableZyw[Math.floor(Math.random() * character.tableZyw.length)];
 const statPP = character.tablePP[Math.floor(Math.random() * character.tablePP.length)];
 
-function roll_2k10_and_add_20() {
-    return Math.floor((Math.random() * 10) + 1) +
-        Math.floor((Math.random() * 10) + 1)
-        + 20;
-}
+const roll_2k10_and_add_20 = () => Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1) + 20;
+
+// function roll_2k10_and_add_20() {
+//     return Math.floor((Math.random() * 10) + 1) +
+//         Math.floor((Math.random() * 10) + 1)
+//         + 20;
+// }
 
 let statWW = roll_2k10_and_add_20();
 let statUS = roll_2k10_and_add_20();
@@ -27,26 +29,35 @@ let statA = 1;
 let statS = statK.toString()[0];
 let statWt = statOdp.toString()[0];
 
-
-const printer = (`---------------------
+const printertest = (`---------------------
 Rasa: ${character.race}
 
-WW: ${statWW}
-US: ${statUS}
-K: ${statK}
-ODP: ${statOdp}
-ZR: ${statZr}
-INT: ${statInt}
-SW: ${statSW}
-OGD: ${statOgd}
+WW: ${statWW} US: ${statUS} K: ${statK} ODP: ${statOdp} ZR: ${statZr} INT: ${statInt} SW: ${statSW} OGD: ${statOgd}
 
-A: ${statA}
-Żyw: ${statZyw}
-S: ${statS}
-Wt: ${statWt}
-Sz: ${character.speed}
-Mag: 0
-PO: 0
-PP: ${statPP}`)
+A: ${statA} Żyw: ${statZyw} S: ${statS} Wt: ${statWt} Sz: ${character.speed} Mag: 0 PO: 0 PP: ${statPP}`)
 
-console.log(printer)
+console.log(printertest)
+
+
+// const printer = (`---------------------
+// Rasa: ${character.race}
+//
+// WW: ${statWW}
+// US: ${statUS}
+// K: ${statK}
+// ODP: ${statOdp}
+// ZR: ${statZr}
+// INT: ${statInt}
+// SW: ${statSW}
+// OGD: ${statOgd}
+//
+// A: ${statA}
+// Żyw: ${statZyw}
+// S: ${statS}
+// Wt: ${statWt}
+// Sz: ${character.speed}
+// Mag: 0
+// PO: 0
+// PP: ${statPP}`)
+//
+// console.log(printer)
