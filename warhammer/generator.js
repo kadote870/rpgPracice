@@ -1,58 +1,74 @@
+const character = {
+    Czlowiek: {
+        race: "Czlowiek",
+        speed: 4,
+        tableZyw: [13, 12, 12, 12, 9, 9, 9, 8, 8, 8],
+        tablePP: [3, 3, 3, 3, 2, 2, 2, 2, 2, 2],
+    },
+    Elf: {
+        race: "Elf",
+        speed: "5",
+        tableZyw: [12, 11, 11, 11, 10, 10, 10, 9, 9, 9],
+        tablePP: [1, 1, 1, 1, 1, 1, 2, 2, 2, 2]
+    },
+    Krasnolud: {
+        race: "Krasnolud",
+        speed: 3,
+        tableZyw: [14, 13, 13, 13, 12, 12, 12, 11, 11, 11],
+        tablePP: [3, 3, 3, 2, 2, 2, 1, 1, 1, 1]
+    },
+    Niziolek: {
+        race: "Niziolek",
+        speed: 4,
+        tableZyw: [11, 10, 10, 10, 9, 9, 9, 8, 8, 8],
+        tablePP: [3, 3, 3, 3, 2, 2, 2, 2, 2, 2]
+    }
+}
+
+
 // const race = "Czlowiek";
 const race = "Elf";
 // const race = "Krasnolud";
 // const race = "Niziolek";
 
-const stat10 = 10;
-const stat20 = 20;
-const stat30 = 30;
 
-//
-// let rollDice = Math.floor((Math.random() * 10) + 1);
-//
-// rollDice.forEach[roll01, roll02, roll03, roll04, roll05, roll06, roll07, roll08, roll09, roll10, roll11, roll12, roll13, roll14, roll15, roll16, roll17, roll18];
-// //
-// // const rollDice = [roll01, roll02, roll03, roll04, roll05, roll06, roll07, roll08, roll09, roll10, roll11, roll12, roll13, roll14, roll15, roll16, roll17, roll18];
-// //
-// // rollDice.forEach(roll => Math.floor((Math.random() * 10) + 1));
+const roll_2k10_and_add_10 = () => {
+    return Math.floor((Math.random() * 10) + 1) +
+        Math.floor((Math.random() * 10) + 1) +
+        10;
+}
 
-// const roll01 = Math.floor((Math.random() * 10) + 1);const roll02 = Math.floor((Math.random() * 10) + 1);const roll03 = Math.floor((Math.random() * 10) + 1);const roll04 = Math.floor((Math.random() * 10) + 1);const roll05 = Math.floor((Math.random() * 10) + 1);const roll06 = Math.floor((Math.random() * 10) + 1);const roll07 = Math.floor((Math.random() * 10) + 1);const roll08 = Math.floor((Math.random() * 10) + 1);const roll09 = Math.floor((Math.random() * 10) + 1);const roll10 = Math.floor((Math.random() * 10) + 1);const roll11 = Math.floor((Math.random() * 10) + 1);const roll12 = Math.floor((Math.random() * 10) + 1);const roll13 = Math.floor((Math.random() * 10) + 1);const roll14 = Math.floor((Math.random() * 10) + 1);const roll15 = Math.floor((Math.random() * 10) + 1);const roll16 = Math.floor((Math.random() * 10) + 1);const roll17 = Math.floor((Math.random() * 10) + 1);const roll18 = Math.floor((Math.random() * 10) + 1);
+const roll_2k10_and_add_20 = () => {
+    return Math.floor((Math.random() * 10) + 1) +
+        Math.floor((Math.random() * 10) + 1)
+        + 20;
+}
 
-const roll01 = Math.floor((Math.random() * 10) + 1);
-const roll02 = Math.floor((Math.random() * 10) + 1);
-const roll03 = Math.floor((Math.random() * 10) + 1);
-const roll04 = Math.floor((Math.random() * 10) + 1);
-const roll05 = Math.floor((Math.random() * 10) + 1);
-const roll06 = Math.floor((Math.random() * 10) + 1);
-const roll07 = Math.floor((Math.random() * 10) + 1);
-const roll08 = Math.floor((Math.random() * 10) + 1);
-const roll09 = Math.floor((Math.random() * 10) + 1);
-const roll10 = Math.floor((Math.random() * 10) + 1);
-const roll11 = Math.floor((Math.random() * 10) + 1);
-const roll12 = Math.floor((Math.random() * 10) + 1);
-const roll13 = Math.floor((Math.random() * 10) + 1);
-const roll14 = Math.floor((Math.random() * 10) + 1);
-const roll15 = Math.floor((Math.random() * 10) + 1);
-const roll16 = Math.floor((Math.random() * 10) + 1);
+const roll_2k10_and_add_30 = () => {
+    return Math.floor((Math.random() * 10) + 1) +
+        Math.floor((Math.random() * 10) + 1) +
+        30;
+}
 
-let statWW = roll01 + roll02 + stat20;
-let statUS = roll03 + roll04 + stat20;
-let statK = roll05 + roll06 + stat20;
-let statOdp = roll07 + roll08 + stat20;
-let statZr = roll09 + roll10 + stat20;
-let statInt = roll11 + roll12 + stat20;
-let statSW = roll13 + roll14 + stat20;
-let statOgd = roll15 + roll16 + stat20;
+
+
+let statWW = roll_2k10_and_add_20();
+let statUS = roll_2k10_and_add_20();
+let statK = roll_2k10_and_add_20();
+let statOdp = roll_2k10_and_add_20();
+let statZr = roll_2k10_and_add_20();
+let statInt = roll_2k10_and_add_20();
+let statSW = roll_2k10_and_add_20();
+let statOgd = roll_2k10_and_add_20();
 
 let statA = 1;
 let statS = statK.toString()[0];
 let statWt = statOdp.toString()[0];
 
-let statZyw = 0;
 
 if (race === "Elf") {
-    let statUS = roll03 + roll04 + stat30;
-    let statZr = roll09 + roll10 + stat30;
+    let statUS = roll_2k10_and_add_30;
+    let statZr = roll_2k10_and_add_30;
 
     let speed = 5;
 
@@ -63,10 +79,10 @@ if (race === "Elf") {
     const statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
 
 } else if (race === "Krasnolud") {
-    let statWW = roll01 + roll02 + stat30;
-    let statOdp = roll07 + roll08 + stat30;
-    let statZr = roll09 + roll10 + stat10;
-    let statOgd = roll15 + roll16 + stat10;
+    let statWW = roll_2k10_and_add_30;
+    let statOdp = roll_2k10_and_add_30;
+    let statZr = roll_2k10_and_add_10;
+    let statOgd = roll_2k10_and_add_10;
 
     let speed = 3;
 
@@ -77,12 +93,12 @@ if (race === "Elf") {
     const statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
 
 } else if (race === "Niziolek") {
-    let statWW = roll01 + roll02 + stat10;
-    let statUS = roll03 + roll04 + stat30;
-    let statK = roll05 + roll06 + stat10;
-    let statOdp = roll07 + roll08 + stat10;
-    let statZr = roll09 + roll10 + stat30;
-    let statOgd = roll15 + roll16 + stat30;
+    let statWW = roll_2k10_and_add_10;
+    let statUS = roll_2k10_and_add_30;
+    let statK = roll_2k10_and_add_10;
+    let statOdp = roll_2k10_and_add_10;
+    let statZr = roll_2k10_and_add_30;
+    let statOgd = roll_2k10_and_add_30;
 
     let speed = 4
 
@@ -101,7 +117,7 @@ if (race === "Elf") {
     const tablePP = [3, 3, 3, 3, 2, 2, 2, 2, 2, 2];
     var statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
 
-
+}
     const character = (`---------------------
 Rasa: ${race}
 
@@ -122,6 +138,6 @@ Sz: ${speed}
 Mag: 0
 PO: 0
 PP: ${statPP}`)
-}
 
-// console.log(character)
+
+console.log(character)
