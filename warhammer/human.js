@@ -1,34 +1,34 @@
-const race = "Czlowiek";
-
-const stat20 = 20;
-
-const rollDice = () => {
-    return Math.floor((Math.random() * 10) + 1);
+const character = {
+    race: "Czlowiek",
+    speed: 4,
+    tableZyw: [13, 12, 12, 12, 9, 9, 9, 8, 8, 8],
+    tablePP: [3, 3, 3, 3, 2, 2, 2, 2, 2, 2],
 }
 
-let statWW = rollDice() + rollDice() + stat20;
-let statUS = rollDice() + rollDice() + stat20;
-let statK = rollDice() + rollDice() + stat20;
-let statOdp = rollDice() + rollDice() + stat20;
-let statZr = rollDice() + rollDice() + stat20;
-let statInt = rollDice() + rollDice() + stat20;
-let statSW = rollDice() + rollDice() + stat20;
-let statOgd = rollDice() + rollDice() + stat20;
+function roll_2k10_and_add_20() {
+    return Math.floor((Math.random() * 10) + 1) +
+        Math.floor((Math.random() * 10) + 1)
+        + 20;
+}
+
+let statWW = roll_2k10_and_add_20();
+let statUS = roll_2k10_and_add_20();
+let statK = roll_2k10_and_add_20();
+let statOdp = roll_2k10_and_add_20();
+let statZr = roll_2k10_and_add_20();
+let statInt = roll_2k10_and_add_20();
+let statSW = roll_2k10_and_add_20();
+let statOgd = roll_2k10_and_add_20();
 
 let statA = 1;
 let statS = statK.toString()[0];
 let statWt = statOdp.toString()[0];
 
-const speed = 4;
+const statZyw = character.tableZyw[Math.floor(Math.random() * character.tableZyw.length)];
+const statPP = character.tablePP[Math.floor(Math.random() * character.tablePP.length)];
 
-const tableZyw = [13, 12, 12, 12, 9, 9, 9, 8, 8, 8];
-const statZyw = tableZyw[Math.floor(Math.random() * tableZyw.length)];
-
-const tablePP = [3, 3, 3, 3, 2, 2, 2, 2, 2, 2];
-const statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
-
-const character = (`---------------------
-Rasa: ${race}
+const characterPrinter = (`---------------------
+Rasa: ${character.race}
 
 WW: ${statWW}
 US: ${statUS}
@@ -43,9 +43,9 @@ A: ${statA}
 Żyw: ${statZyw}
 S: ${statS}
 Wt: ${statWt}
-Sz: ${speed}
+Sz: ${character.speed}
 Mag: 0
 PO: 0
 PP: ${statPP}`)
 
-console.log(character)
+console.log(characterPrinter)
