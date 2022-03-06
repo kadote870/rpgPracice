@@ -34,6 +34,18 @@ if (ktoToJestRoll < 5) {
     ktoToJest = 'Ktoś z najbliższego otoczenia jednej z czołowych postaci poszczególnego klanu';
 } else if (ktoToJestRoll < 45) {
     ktoToJest = 'Samuraj - Bushi/Shugenja';
+
+    klan = [
+        skorpion = ['Bayushi', 'Shosuro', 'Soshi', 'Yogo'],
+        feniks = ['Issawa', 'Shiba', 'Asako'],
+        jednorozec = ['Shinjo', 'Ide', 'Iuchi', 'Otaku', 'Moto'],
+        krab = ['Hida', 'Hiruma', 'Kaiu', 'Kuni', 'Yasuki'],
+        lew = ['Akodo', 'Matsu', 'Ikoma', 'Kitsu'],
+        smok = ['Togashi', 'Agasha', 'Mirumoto', 'Kitsuki'],
+        zwuraw = ['Doji', 'Kakita', 'Daidoji', 'Asahina'],
+        malyKlan = ['Borsuk - Ichiro' , 'Lis - Kitsune' , 'Modliszka - Gusai', 'Osa', 'Ważka - Tonbo', 'Wróbel - Suzume','Sokół - Toritaka(nieoficjalnie)', 'Stonoga - Moshi', 'Zając', 'Żółw']
+        domCesarski = [ 'Seppun', 'Otomo', 'Miya']
+    ]
 } else if (ktoToJestRoll < 65) {
     ktoToJest = 'Kupiec / Rzemieślnik / Mnich';
 } else if (ktoToJestRoll < 85) {
