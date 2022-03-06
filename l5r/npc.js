@@ -43,7 +43,7 @@ if (ktoToJestRoll < 5) {
         lew = ['Akodo', 'Matsu', 'Ikoma', 'Kitsu'],
         smok = ['Togashi', 'Agasha', 'Mirumoto', 'Kitsuki'],
         zwuraw = ['Doji', 'Kakita', 'Daidoji', 'Asahina'],
-        malyKlan = ['Borsuk - Ichiro' , 'Lis - Kitsune' , 'Modliszka - Gusai', 'Osa', 'Ważka - Tonbo', 'Wróbel - Suzume','Sokół - Toritaka(nieoficjalnie)', 'Stonoga - Moshi', 'Zając', 'Żółw']
+        malyKlan = ['Borsuk - Ichiro' , 'Lis - Kitsune' , 'Modliszka - Gusai', 'Osa', 'Ważka - Tonbo', 'Wróbel - Suzume','Sokół - Toritaka(nieoficjalnie)', 'Stonoga - Moshi', 'Zając', 'Żółw'],
         domCesarski = [ 'Seppun', 'Otomo', 'Miya']
     ]
 } else if (ktoToJestRoll < 65) {
