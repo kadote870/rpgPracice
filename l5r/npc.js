@@ -25,68 +25,58 @@ const krag = {
     powietrze: Math.min(cecha.refleks, cecha.intuicja),
     pustka: rollStat(),
 };
-
-let ktoToJest;
-// const ktoToJestRoll = Math.floor((Math.random() * 100) + 1);
-const ktoToJestRoll = 1
-
-if (ktoToJestRoll < 5) {
-    ktoToTable = ['Kami', 'Istota Metafizyczna', 'Fortuna']
-    ktoToJest = ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
-
-} else if (ktoToJestRoll < 10) {
-    ktoToTable = ['Wysoki urzędnik cesarskiego dworu (dom cesarski)',
-        'Wysoki urzędnik cesarskiego dworu (inny klan)',
-        'Ktoś z najbliższego otoczenia cesarza',
-        'Ktoś z bliskiej rodziny cesarza']
-    ktoToJest = ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
-
-} else if (ktoToJestRoll < 15) {
-//dygnitarz
-
-    const zJakiegoKlanuOnJestRoll = Math.floor((Math.random() * 100) + 1);
-
-    if (zJakiegoKlanuOnJestRoll > 10) {
-        klanTable = ['Feniks', 'Jednorożec', 'Krab', 'Lew', 'Skorpion', 'Smok', 'Żuraw'];
-    } else {
-        klanTable = ['Borsuk', 'Lis', 'Modliszka', 'Osa', 'Ważka', 'Wróbel', 'Sokół', 'Stonoga', 'Zając', 'Żółw', 'Dom Cesarski'];
-    }
-
-    let zJakiegoKlanuOnJest = klanTable[Math.floor(Math.random() * klanTable.length)];
-
-    ktoToJest = 'Wysoki dygnitarz / Ktoś z najbliższego otoczenia jednej z czołowych postaci poszczególnego klanu: ' + zJakiegoKlanuOnJest;
-
-} else if (ktoToJestRoll < 45) {
-    //Samuraje
-
-    const zJakiegoKlanuOnJestRoll = Math.floor((Math.random() * 100) + 1);
-
-    if (zJakiegoKlanuOnJestRoll > 10) {
-        klanTable = ['Feniks', 'Jednorożec', 'Krab', 'Lew', 'Skorpion', 'Smok', 'Żuraw'];
-    } else {
-        klanTable = ['Borsuk', 'Lis', 'Modliszka', 'Osa', 'Ważka', 'Wróbel', 'Sokół', 'Stonoga', 'Zając', 'Żółw', 'Dom Cesarski'];
-    }
-
-    let zJakiegoKlanuOnJest = klanTable[Math.floor(Math.random() * klanTable.length)];
-
-    ktoToJest = 'Samuraj - Bushi / Shugenja z klanu: ' + zJakiegoKlanuOnJest;
-
-} else if (ktoToJestRoll < 65) {
-    ktoToJest = 'Heimin: Kupiec / Rzemieślnik / Artysta / Mnich';
-} else if (ktoToJestRoll < 85) {
-    ktoToJest = 'Heimin: Chłop';
-} else {
-    ktoToJest = 'Eta / Ronin';
-}
-
-const skillRandom = () => skills[Math.floor(Math.random() * skills.length)];
-
 const skills = ['Aktorstwo', 'Ceremonia parzenia herbaty', 'Dyplomacja', 'Etykieta', 'Fałszerstwo', 'Gawędziarstwo',
     'Handel', 'Hazard', 'Heraldyka', 'Historia', 'Iaijutsu – pojedynek', 'Jeździectwo', 'Kaligrafia', 'Kyujutsu - Łuk',
     'Malarstwo', 'Medycyna', 'Medytacja', 'Kenjutsu - Miecz', 'Miecznik', 'Muzyka', 'Obrona', 'Płatnerz', 'Poezja',
     'Polowanie', 'Prawo', 'Rzemiosło', 'Shintao', 'Skradanie się', 'Szczerość', 'Śledztwo', 'Ślusarstwo', 'Taktyka',
     'Taniec', 'Teologia', 'Torturowanie', 'Trucizny', 'Uwodzenie', 'Wachlarz bojowy', 'Walka wręcz', 'Wiedza',
     'Wysportowanie', 'Zapasy', 'Zielarstwo'];
+const skillRandom = () => skills[Math.floor(Math.random() * skills.length)];
+
+const klanRoll = Math.floor((Math.random() * 100) + 1);
+
+if (klanRoll > 10) {
+    klanTable = ['Feniks', 'Jednorożec', 'Krab', 'Lew', 'Skorpion', 'Smok', 'Żuraw'];
+} else {
+    klanTable = ['Borsuk', 'Lis', 'Modliszka', 'Osa', 'Ważka', 'Wróbel',
+        'Sokół', 'Stonoga', 'Zając', 'Żółw', "Dom cesarski - niski prestiż"];
+}
+
+let jakiKlan = klanTable[Math.floor(Math.random() * klanTable.length)];
+
+const ktoToJestRoll = Math.floor((Math.random() * 100) + 1);
+// const ktoToJestRoll = 11
+
+if (ktoToJestRoll < 5) {
+    ktoToTable = ['Kami', 'Istota Metafizyczna', 'Fortuna']
+    ktoToJest = ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
+
+} else if (ktoToJestRoll < 10) {
+    ktoToTable = ['Urzędnik cesarskiego dworu (Dom Cesarski)',
+        'Urzędnik cesarskiego dworu (' + jakiKlan + ')',
+        'Ktoś z najbliższego otoczenia cesarza',
+        'Ktoś z bliskiej rodziny cesarza']
+    ktoToJest = ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
+
+} else if (ktoToJestRoll < 15) {
+    ktoToTable = ['Wysoki dygnitarz klanu: ' + jakiKlan,
+        'Ktoś z najbliższego otoczenia jednej z czołowych klanu: ' + jakiKlan]
+    ktoToJest = ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
+
+} else if (ktoToJestRoll < 45) {
+    ktoToJest = 'Samuraj - Bushi / Shugenja z klanu: ' + jakiKlan;
+
+} else if (ktoToJestRoll < 65) {
+    ktoToTable = ['Kupiec', 'Rzemieślnik', 'Artysta', 'Mnich', 'Gejsza'];
+    ktoToJest = 'Heimin: ' + ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
+
+} else if (ktoToJestRoll < 85) {
+    ktoToJest = 'Heimin: Chłop';
+} else {
+    ktoToTable = ['Eta', 'Ronin', 'Gejsza', 'Kurtyzana', 'Przestępca'];
+    ktoToJest = 'Eta: ' + ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
+}
+
 
 const printer = (`
 Random NPC: ${ktoToJest}
@@ -100,7 +90,7 @@ Pustka: ${krag.pustka}
 Mistrzostwo w: ${skillRandom()} 
 Inne istotne umiejętności: ${skillRandom()}, ${skillRandom()}, ${skillRandom()}   
  
-Miecz: ${cecha.umiejetnoscKenjutsu} (Atak: !${cecha.umiejetnoscKenjutsu + cecha.zrecznosc}z${cecha.zrecznosc}) | Obrażenia: (katana średniej jakości 3z2): !${cecha.katanaRoll + cecha.sila}l${cecha.katanaKeep}
+Miecz: ${cecha.umiejetnoscKenjutsu} (Atak: !${cecha.kenjutsu + cecha.zrecznosc}z${cecha.zrecznosc}) | Obrażenia: (katana średniej jakości 3z2): !${cecha.katanaRoll + cecha.sila}l${cecha.katanaKeep}
 Trudność Trafienia | Bez zbroi: ${cecha.refleks * 5} | Lekka zbroja: ${cecha.refleks * 5 + 5} | Ciężka zbroja: ${cecha.refleks * 5 + 10}
 Rany: ${krag.ziemia * 2} na poziom | Rany całość: ${krag.ziemia * 2 * 8}`);
 
