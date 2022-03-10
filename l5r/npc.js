@@ -1,45 +1,82 @@
 const rollStat = () => Math.floor((Math.random() * 5) + 1);
 
-const cechaWytrzymalosc = rollStat();
-const cechaSilaWoli = rollStat();
-const kragZiemia = Math.min(cechaSilaWoli, cechaWytrzymalosc);
-
-const cechaZrecznosc = rollStat();
-const cechaInteligencja = rollStat();
-const kragOgnien = Math.min(cechaZrecznosc, cechaInteligencja);
-
-const cechaSila = rollStat();
-const cechaSpostrzegawczosc = rollStat();
-const kragWoda = Math.min(cechaSila, cechaSpostrzegawczosc);
-
-const cechaRefleks = rollStat();
-const cechaIntuicja = rollStat();
-const kragPowietrze = Math.min(cechaRefleks, cechaIntuicja);
-
-const kragPustka = rollStat();
-
-const umiejetnoscKenjutsu = rollStat();
-
-const katanaRoll = 3;
-const katanaKeep = 2;
+const cecha = {
+    //ziemia
+    wytrzymalosc: rollStat(),
+    silaWoli: rollStat(),
+    //ogien
+    zrecznosc: rollStat(),
+    inteligencja: rollStat(),
+    //woda
+    sila: rollStat(),
+    spostrzegawczosc: rollStat(),
+    //powietrze
+    refleks: rollStat(),
+    intuicja: rollStat(),
+    //walka
+    kenjutsu: rollStat(),
+    katanaRoll: 3,
+    katanaKeep: 2,
+};
+const krag = {
+    ziemia: Math.min(cecha.silaWoli, cecha.wytrzymalosc),
+    ogien: Math.min(cecha.zrecznosc, cecha.inteligencja),
+    woda: Math.min(cecha.sila, cecha.spostrzegawczosc),
+    powietrze: Math.min(cecha.refleks, cecha.intuicja),
+    pustka: rollStat(),
+};
 
 let ktoToJest;
-const ktoToJestRoll = Math.floor((Math.random() * 100) + 1);
+// const ktoToJestRoll = Math.floor((Math.random() * 100) + 1);
+const ktoToJestRoll = 1
 
 if (ktoToJestRoll < 5) {
-    ktoToJest = 'Kami'
+    ktoToTable = ['Kami', 'Istota Metafizyczna', 'Fortuna']
+    ktoToJest = ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
+
 } else if (ktoToJestRoll < 10) {
-    ktoToJest = 'Ktoś z najbliższego otoczenia/rodziny cesarza';
+    ktoToTable = ['Wysoki urzędnik cesarskiego dworu (dom cesarski)',
+        'Wysoki urzędnik cesarskiego dworu (inny klan)',
+        'Ktoś z najbliższego otoczenia cesarza',
+        'Ktoś z bliskiej rodziny cesarza']
+    ktoToJest = ktoToTable[Math.floor(Math.random() * ktoToTable.length)];
+
 } else if (ktoToJestRoll < 15) {
-    ktoToJest = 'Ktoś z najbliższego otoczenia jednej z czołowych postaci poszczególnego klanu';
+//dygnitarz
+
+    const zJakiegoKlanuOnJestRoll = Math.floor((Math.random() * 100) + 1);
+
+    if (zJakiegoKlanuOnJestRoll > 10) {
+        klanTable = ['Feniks', 'Jednorożec', 'Krab', 'Lew', 'Skorpion', 'Smok', 'Żuraw'];
+    } else {
+        klanTable = ['Borsuk', 'Lis', 'Modliszka', 'Osa', 'Ważka', 'Wróbel', 'Sokół', 'Stonoga', 'Zając', 'Żółw', 'Dom Cesarski'];
+    }
+
+    let zJakiegoKlanuOnJest = klanTable[Math.floor(Math.random() * klanTable.length)];
+
+    ktoToJest = 'Wysoki dygnitarz / Ktoś z najbliższego otoczenia jednej z czołowych postaci poszczególnego klanu: ' + zJakiegoKlanuOnJest;
+
 } else if (ktoToJestRoll < 45) {
-    ktoToJest = 'Samuraj - Bushi/Shugenja';
+    //Samuraje
+
+    const zJakiegoKlanuOnJestRoll = Math.floor((Math.random() * 100) + 1);
+
+    if (zJakiegoKlanuOnJestRoll > 10) {
+        klanTable = ['Feniks', 'Jednorożec', 'Krab', 'Lew', 'Skorpion', 'Smok', 'Żuraw'];
+    } else {
+        klanTable = ['Borsuk', 'Lis', 'Modliszka', 'Osa', 'Ważka', 'Wróbel', 'Sokół', 'Stonoga', 'Zając', 'Żółw', 'Dom Cesarski'];
+    }
+
+    let zJakiegoKlanuOnJest = klanTable[Math.floor(Math.random() * klanTable.length)];
+
+    ktoToJest = 'Samuraj - Bushi / Shugenja z klanu: ' + zJakiegoKlanuOnJest;
+
 } else if (ktoToJestRoll < 65) {
-    ktoToJest = 'Kupiec / Rzemieślnik / Mnich';
+    ktoToJest = 'Heimin: Kupiec / Rzemieślnik / Artysta / Mnich';
 } else if (ktoToJestRoll < 85) {
-    ktoToJest = 'Chłop';
+    ktoToJest = 'Heimin: Chłop';
 } else {
-    ktoToJest = 'Eta';
+    ktoToJest = 'Eta / Ronin';
 }
 
 const skillRandom = () => skills[Math.floor(Math.random() * skills.length)];
@@ -53,17 +90,18 @@ const skills = ['Aktorstwo', 'Ceremonia parzenia herbaty', 'Dyplomacja', 'Etykie
 
 const printer = (`
 Random NPC: ${ktoToJest}
-Ziemia: ${kragZiemia} | Wytrzymałość: ${cechaWytrzymalosc} | Siła Woli: ${cechaSilaWoli}
-Ogień: ${kragOgnien} | Zręczność: ${cechaZrecznosc} | Inteligencja: ${cechaInteligencja}
-Woda: ${kragWoda} | Siła: ${cechaSila} | Spostrzegawczość: ${cechaSpostrzegawczosc}
-Powietrze: ${kragPowietrze} | Refleks: ${cechaRefleks} | Intuicja: ${cechaIntuicja}
-Pustka: ${kragPustka}
+
+Ziemia: ${krag.ziemia} | Wytrzymałość: ${cecha.wytrzymalosc} | Siła Woli: ${cecha.silaWoli}
+Ogień: ${krag.ogien} | Zręczność: ${cecha.zrecznosc} | Inteligencja: ${cecha.inteligencja}
+Woda: ${krag.ziemia} | Siła: ${cecha.sila} | Spostrzegawczość: ${cecha.spostrzegawczosc}
+Powietrze: ${krag.powietrze} | Refleks: ${cecha.refleks} | Intuicja: ${cecha.intuicja}
+Pustka: ${krag.pustka}
 
 Mistrzostwo w: ${skillRandom()} 
 Inne istotne umiejętności: ${skillRandom()}, ${skillRandom()}, ${skillRandom()}   
  
-Miecz: ${umiejetnoscKenjutsu} (Atak: !${umiejetnoscKenjutsu + cechaZrecznosc}z${cechaZrecznosc}) | Obrażenia: (katana średniej jakości 3z2): !${katanaRoll + cechaSila}l${katanaKeep}
-Trudność Trafienia | Bez zbroi: ${cechaRefleks * 5} | Lekka zbroja: ${cechaRefleks * 5 + 5} | Ciężka zbroja: ${cechaRefleks * 5 + 10}
-Rany: ${kragZiemia * 2} na poziom | Rany całość: ${kragZiemia * 2 * 8}`);
+Miecz: ${cecha.umiejetnoscKenjutsu} (Atak: !${cecha.umiejetnoscKenjutsu + cecha.zrecznosc}z${cecha.zrecznosc}) | Obrażenia: (katana średniej jakości 3z2): !${cecha.katanaRoll + cecha.sila}l${cecha.katanaKeep}
+Trudność Trafienia | Bez zbroi: ${cecha.refleks * 5} | Lekka zbroja: ${cecha.refleks * 5 + 5} | Ciężka zbroja: ${cecha.refleks * 5 + 10}
+Rany: ${krag.ziemia * 2} na poziom | Rany całość: ${krag.ziemia * 2 * 8}`);
 
 console.log(printer);
