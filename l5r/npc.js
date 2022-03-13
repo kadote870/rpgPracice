@@ -1,8 +1,7 @@
 import {cecha, krag} from "./modules/basicStats.js";
 import {ktoToJest} from "./modules/whoIsThis.js";
-import {skillsAll} from "./modules/skills.js";
+import {skillRandom} from "./modules/skills.js";
 
-const skillRandom = () => skillsAll[Math.floor(Math.random() * skillsAll.length)];
 
 const printer = (`
 Random NPC: ${ktoToJest}
