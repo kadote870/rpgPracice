@@ -1,31 +1,6 @@
-const rollD5 = () => Math.floor((Math.random() * 5) + 1);
-const rollD100 = () => Math.floor((Math.random() * 100) + 1);
+import {rollD100} from './roll/roll.js';
+import {cecha, krag} from "./modules/basicStats.js";
 
-const cecha = {
-    //ziemia
-    wytrzymalosc: rollD5(),
-    silaWoli: rollD5(),
-    //ogien
-    zrecznosc: rollD5(),
-    inteligencja: rollD5(),
-    //woda
-    sila: rollD5(),
-    spostrzegawczosc: rollD5(),
-    //powietrze
-    refleks: rollD5(),
-    intuicja: rollD5(),
-    //walka
-    kenjutsu: rollD5(),
-    katanaRoll: 3,
-    katanaKeep: 2,
-};
-const krag = {
-    ziemia: Math.min(cecha.silaWoli, cecha.wytrzymalosc),
-    ogien: Math.min(cecha.zrecznosc, cecha.inteligencja),
-    woda: Math.min(cecha.sila, cecha.spostrzegawczosc),
-    powietrze: Math.min(cecha.refleks, cecha.intuicja),
-    pustka: rollD5(),
-};
 const skills = ['Aktorstwo', 'Ceremonia parzenia herbaty', 'Dyplomacja', 'Etykieta', 'Fałszerstwo', 'Gawędziarstwo',
     'Handel', 'Hazard', 'Heraldyka', 'Historia', 'Iaijutsu – pojedynek', 'Jeździectwo', 'Kaligrafia', 'Kyujutsu - Łuk',
     'Malarstwo', 'Medycyna', 'Medytacja', 'Kenjutsu - Miecz', 'Miecznik', 'Muzyka', 'Obrona', 'Płatnerz', 'Poezja',
@@ -33,6 +8,12 @@ const skills = ['Aktorstwo', 'Ceremonia parzenia herbaty', 'Dyplomacja', 'Etykie
     'Taniec', 'Teologia', 'Torturowanie', 'Trucizny', 'Uwodzenie', 'Wachlarz bojowy', 'Walka wręcz', 'Wiedza',
     'Wysportowanie', 'Zapasy', 'Zielarstwo'];
 const skillRandom = () => skills[Math.floor(Math.random() * skills.length)];
+
+let klanTable;
+let ktoToTable;
+let ktoToJest;
+let klasa;
+let specjalistaTable;
 
 if (rollD100() > 10) {
     klanTable = ['Feniks', 'Jednorożec', 'Krab', 'Lew', 'Skorpion', 'Smok', 'Żuraw'];
