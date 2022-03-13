@@ -1,14 +1,10 @@
+import {roll_2k10_and_add_20} from "../roll/roll.js";
+
 const character = {
     race: "Czlowiek",
     speed: 4,
     tableZyw: [13, 12, 12, 12, 9, 9, 9, 8, 8, 8],
     tablePP: [3, 3, 3, 3, 2, 2, 2, 2, 2, 2],
-}
-
-function roll_2k10_and_add_20() {
-    return Math.floor((Math.random() * 10) + 1) +
-        Math.floor((Math.random() * 10) + 1)
-        + 20;
 }
 
 let statWW = roll_2k10_and_add_20();
