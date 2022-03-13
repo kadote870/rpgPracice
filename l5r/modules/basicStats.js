@@ -1,4 +1,4 @@
-import {rollD5} from "../roll/roll.js";
+import {rollD5} from "../../roll/roll.js";
 
 export const cecha = {
     //ziemia

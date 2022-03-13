@@ -1,8 +1,9 @@
-import {rollD100} from "../roll/roll.js";
+import {rollD100} from "../../roll/roll.js";
+
+export let ktoToJest;
 
 let klanTable;
 let ktoToTable;
-export let ktoToJest;
 let klasa;
 let specjalistaTable;
 
@@ -16,7 +17,6 @@ if (rollD100() > 10) {
 export let jakiKlan = klanTable[Math.floor(Math.random() * klanTable.length)];
 
 const ktoToJestRoll = rollD100();
-// const ktoToJestRoll = 40;
 
 if (ktoToJestRoll < 5) {
     ktoToTable = ['Kami', 'Istota Metafizyczna', 'Fortuna'];
