@@ -1,3 +1,3 @@
-import {rollD100} from "../roll/roll.js";
+import {roll_d100} from "../roll/roll.js";
 
-console.log(rollD100())
+console.log(roll_d100())

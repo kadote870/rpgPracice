@@ -1,3 +1,5 @@
+import {roll_2d10_and_add_10, roll_2d10_and_add_20, roll_2d10_and_add_30} from "../roll/roll.js";
+
 const character = {
     Czlowiek: {
         race: "Czlowiek",
@@ -32,34 +34,15 @@ const race = "Elf";
 // const race = "Niziolek";
 
 
-const roll_2k10_and_add_10 = () => {
-    return Math.floor((Math.random() * 10) + 1) +
-        Math.floor((Math.random() * 10) + 1) +
-        10;
-}
 
-const roll_2k10_and_add_20 = () => {
-    return Math.floor((Math.random() * 10) + 1) +
-        Math.floor((Math.random() * 10) + 1)
-        + 20;
-}
-
-const roll_2k10_and_add_30 = () => {
-    return Math.floor((Math.random() * 10) + 1) +
-        Math.floor((Math.random() * 10) + 1) +
-        30;
-}
-
-
-
-let statWW = roll_2k10_and_add_20();
-let statUS = roll_2k10_and_add_20();
-let statK = roll_2k10_and_add_20();
-let statOdp = roll_2k10_and_add_20();
-let statZr = roll_2k10_and_add_20();
-let statInt = roll_2k10_and_add_20();
-let statSW = roll_2k10_and_add_20();
-let statOgd = roll_2k10_and_add_20();
+let statWW = roll_2d10_and_add_20();
+let statUS = roll_2d10_and_add_20();
+let statK = roll_2d10_and_add_20();
+let statOdp = roll_2d10_and_add_20();
+let statZr = roll_2d10_and_add_20();
+let statInt = roll_2d10_and_add_20();
+let statSW = roll_2d10_and_add_20();
+let statOgd = roll_2d10_and_add_20();
 
 let statA = 1;
 let statS = statK.toString()[0];
@@ -67,8 +50,8 @@ let statWt = statOdp.toString()[0];
 
 
 if (race === "Elf") {
-    let statUS = roll_2k10_and_add_30;
-    let statZr = roll_2k10_and_add_30;
+    let statUS = roll_2d10_and_add_30;
+    let statZr = roll_2d10_and_add_30;
 
     let speed = 5;
 
@@ -79,10 +62,10 @@ if (race === "Elf") {
     const statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
 
 } else if (race === "Krasnolud") {
-    let statWW = roll_2k10_and_add_30;
-    let statOdp = roll_2k10_and_add_30;
-    let statZr = roll_2k10_and_add_10;
-    let statOgd = roll_2k10_and_add_10;
+    let statWW = roll_2d10_and_add_30;
+    let statOdp = roll_2d10_and_add_30;
+    let statZr = roll_2d10_and_add_10;
+    let statOgd = roll_2d10_and_add_10;
 
     let speed = 3;
 
@@ -93,12 +76,12 @@ if (race === "Elf") {
     const statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
 
 } else if (race === "Niziolek") {
-    let statWW = roll_2k10_and_add_10;
-    let statUS = roll_2k10_and_add_30;
-    let statK = roll_2k10_and_add_10;
-    let statOdp = roll_2k10_and_add_10;
-    let statZr = roll_2k10_and_add_30;
-    let statOgd = roll_2k10_and_add_30;
+    let statWW = roll_2d10_and_add_10;
+    let statUS = roll_2d10_and_add_30;
+    let statK = roll_2d10_and_add_10;
+    let statOdp = roll_2d10_and_add_10;
+    let statZr = roll_2d10_and_add_30;
+    let statOgd = roll_2d10_and_add_30;
 
     let speed = 4
 

@@ -1,4 +1,4 @@
-import {roll_2k10_and_add_20} from "../roll/roll.js";
+import {roll_2d10_and_add_20} from "../roll/roll.js";
 
 const character = {
     race: "Czlowiek",
@@ -7,14 +7,14 @@ const character = {
     tablePP: [3, 3, 3, 3, 2, 2, 2, 2, 2, 2],
 }
 
-let statWW = roll_2k10_and_add_20();
-let statUS = roll_2k10_and_add_20();
-let statK = roll_2k10_and_add_20();
-let statOdp = roll_2k10_and_add_20();
-let statZr = roll_2k10_and_add_20();
-let statInt = roll_2k10_and_add_20();
-let statSW = roll_2k10_and_add_20();
-let statOgd = roll_2k10_and_add_20();
+let statWW = roll_2d10_and_add_20();
+let statUS = roll_2d10_and_add_20();
+let statK = roll_2d10_and_add_20();
+let statOdp = roll_2d10_and_add_20();
+let statZr = roll_2d10_and_add_20();
+let statInt = roll_2d10_and_add_20();
+let statSW = roll_2d10_and_add_20();
+let statOgd = roll_2d10_and_add_20();
 
 let statA = 1;
 let statS = statK.toString()[0];

@@ -1,20 +1,20 @@
-import {rollD5} from "../../roll/roll.js";
+import {roll_d5} from "../../roll/roll.js";
 
 export const cecha = {
     //ziemia
-    wytrzymalosc: rollD5(),
-    silaWoli: rollD5(),
+    wytrzymalosc: roll_d5(),
+    silaWoli: roll_d5(),
     //ogien
-    zrecznosc: rollD5(),
-    inteligencja: rollD5(),
+    zrecznosc: roll_d5(),
+    inteligencja: roll_d5(),
     //woda
-    sila: rollD5(),
-    spostrzegawczosc: rollD5(),
+    sila: roll_d5(),
+    spostrzegawczosc: roll_d5(),
     //powietrze
-    refleks: rollD5(),
-    intuicja: rollD5(),
+    refleks: roll_d5(),
+    intuicja: roll_d5(),
     //walka
-    kenjutsu: rollD5(),
+    kenjutsu: roll_d5(),
     katanaRoll: 3,
     katanaKeep: 2,
 };
@@ -23,5 +23,5 @@ export const krag = {
     ogien: Math.min(cecha.zrecznosc, cecha.inteligencja),
     woda: Math.min(cecha.sila, cecha.spostrzegawczosc),
     powietrze: Math.min(cecha.refleks, cecha.intuicja),
-    pustka: rollD5(),
+    pustka: roll_d5(),
 };

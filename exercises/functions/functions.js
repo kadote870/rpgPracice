@@ -1,13 +1,13 @@
-const roll_2k10_and_add_20 = () => Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1) + 20;
+const roll_2d10_and_add_20 = () => Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1) + 20;
 
-function roll_2k10_and_add_30() {
+function roll_2d10_and_add_30() {
     return Math.floor((Math.random() * 10) + 1) +
         Math.floor((Math.random() * 10) + 1)
         + 30;
 }
 
-console.log(roll_2k10_and_add_20())
-console.log(roll_2k10_and_add_30())
+console.log(roll_2d10_and_add_20())
+console.log(roll_2d10_and_add_30())
 
 //----------------------------------------
 function test(get_name) {

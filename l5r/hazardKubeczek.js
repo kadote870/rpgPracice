@@ -1,7 +1,7 @@
-import {rollD6} from "../roll/roll.js";
+import {roll_d6} from "../roll/roll.js";
 
-let gambling1 = rollD6();
-let gambling2 = rollD6();
+let gambling1 = roll_d6();
+let gambling2 = roll_d6();
 let parzyste = (gambling1 + gambling2) % 2;
 
 if (parzyste === 0) {
