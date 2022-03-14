@@ -1,6 +1,6 @@
 import {roll_2d10_and_add_10, roll_2d10_and_add_20, roll_2d10_and_add_30} from "../roll/roll.js";
 
-const character = {
+export const races = {
     Czlowiek: {
         race: "Czlowiek",
         speed: 4,
@@ -50,16 +50,7 @@ let statWt = statOdp.toString()[0];
 
 
 if (race === "Elf") {
-    let statUS = roll_2d10_and_add_30;
-    let statZr = roll_2d10_and_add_30;
-
-    let speed = 5;
-
-    const tableZyw = [12, 11, 11, 11, 10, 10, 10, 9, 9, 9];
-    const statZyw = tableZyw[Math.floor(Math.random() * tableZyw.length)];
-
-    const tablePP = [1, 1, 1, 1, 1, 1, 2, 2, 2, 2];
-    const statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
+//deleted
 
 } else if (race === "Krasnolud") {
     let statWW = roll_2d10_and_add_30;
@@ -92,35 +83,6 @@ if (race === "Elf") {
     const statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
 
 } else {
-    var speed = 4;
-
-    const tableZyw = [13, 12, 12, 12, 9, 9, 9, 8, 8, 8];
-    var statZyw = tableZyw[Math.floor(Math.random() * tableZyw.length)];
-
-    const tablePP = [3, 3, 3, 3, 2, 2, 2, 2, 2, 2];
-    var statPP = tablePP[Math.floor(Math.random() * tablePP.length)];
-
+    //deleted
 }
-    const character = (`---------------------
-Rasa: ${race}
-
-WW: ${statWW}
-US: ${statUS}
-K: ${statK}
-ODP: ${statOdp}
-ZR: ${statZr}
-INT: ${statInt}
-SW: ${statSW}
-OGD: ${statOgd}
-
-A: ${statA}
-Żyw: ${statZyw}
-S: ${statS}
-Wt: ${statWt}
-Sz: ${speed}
-Mag: 0
-PO: 0
-PP: ${statPP}`)
-
-
-console.log(character)
+//printer deleted

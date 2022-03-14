@@ -1,11 +1,5 @@
 import {roll_2d10_and_add_20} from "../roll/roll.js";
-
-const character = {
-    race: "Czlowiek",
-    speed: 4,
-    tableZyw: [13, 12, 12, 12, 9, 9, 9, 8, 8, 8],
-    tablePP: [3, 3, 3, 3, 2, 2, 2, 2, 2, 2],
-}
+import {races} from "./generator.js";
 
 let statWW = roll_2d10_and_add_20();
 let statUS = roll_2d10_and_add_20();
@@ -20,11 +14,11 @@ let statA = 1;
 let statS = statK.toString()[0];
 let statWt = statOdp.toString()[0];
 
-const statZyw = character.tableZyw[Math.floor(Math.random() * character.tableZyw.length)];
-const statPP = character.tablePP[Math.floor(Math.random() * character.tablePP.length)];
+const statZyw = races.Czlowiek.tableZyw[Math.floor(Math.random() * races.Czlowiek.tableZyw.length)];
+const statPP = races.Czlowiek.tablePP[Math.floor(Math.random() * races.Czlowiek.tablePP.length)];
 
 const characterPrinter = (`---------------------
-Rasa: ${character.race}
+Rasa: ${races.Czlowiek.race}
 
 WW: ${statWW}
 US: ${statUS}
@@ -39,7 +33,7 @@ A: ${statA}
 Żyw: ${statZyw}
 S: ${statS}
 Wt: ${statWt}
-Sz: ${character.speed}
+Sz: ${races.Czlowiek.speed}
 Mag: 0
 PO: 0
 PP: ${statPP}`)
