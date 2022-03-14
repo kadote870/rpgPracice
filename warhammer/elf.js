@@ -1,7 +1,7 @@
 import {roll_2d10_and_add_20, roll_2d10_and_add_30} from "../roll/roll.js";
 import {races} from "./generator.js";
 
-const rasaPrefix = races.Elf
+const racePrefix = races.Elf
 
 let statWW = roll_2d10_and_add_20();
 let statUS = roll_2d10_and_add_30();
@@ -16,11 +16,11 @@ let statA = 1;
 let statS = statK.toString()[0];
 let statWt = statOdp.toString()[0];
 
-const statZyw = races.Elf.tableZyw[Math.floor(Math.random() * races.Elf.tableZyw.length)];
-const statPP = races.Elf.tablePP[Math.floor(Math.random() * races.Elf.tablePP.length)];
+const statZyw = racePrefix.tableZyw[Math.floor(Math.random() * racePrefix.tableZyw.length)];
+const statPP = racePrefix.tablePP[Math.floor(Math.random() * racePrefix.tablePP.length)];
 
 const characterPrinter = (`---------------------
-Rasa: ${rasaPrefix.race}
+Rasa: ${racePrefix.race}
 
 WW: ${statWW}
 US: ${statUS}
