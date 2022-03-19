@@ -1,4 +1,4 @@
-import {roll_d6} from "../roll/roll.js";
+import {roll_d6} from "../../roll/roll.js";
 
 const gambling1 = roll_d6();
 const gambling2 = roll_d6();
