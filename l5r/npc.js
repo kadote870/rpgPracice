@@ -1,10 +1,11 @@
 import {cecha, krag} from "./modules/basicStats.js";
 import {ktoToJest} from "./modules/whoIsThis.js";
 import {skillRandom} from "./modules/skills.js";
+import {name} from "./other/name.js";
 
 
 const printer = (`
-Random NPC: ${ktoToJest}
+Random NPC: ${name}, ${ktoToJest}
 
 Ziemia: ${krag.ziemia} | Wytrzymałość: ${cecha.wytrzymalosc} | Siła Woli: ${cecha.silaWoli}
 Ogień: ${krag.ogien} | Zręczność: ${cecha.zrecznosc} | Inteligencja: ${cecha.inteligencja}
