@@ -5,6 +5,7 @@
 }
 
 body {
+    margin: 80px;
     font-size: 36px;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
@@ -12,14 +13,29 @@ body {
     background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }
 
-div {
-    /* background-color: lime; */
+table {
+    border-spacing: 0;
 }
 
-p {
-    /* background-color: gold; */
+table,
+td,
+th {
+    border: 1px solid black;
 }
 
-span {
-    /* background-color: tomato; */
+td,
+th {
+    padding: 5px 20px;
+}
+
+thead {
+    background-color: tomato;
+}
+
+tbody {
+    background-color: #fff;
+}
+
+tfoot {
+    background-color: royalblue;
 }

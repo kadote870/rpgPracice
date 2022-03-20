@@ -20,4 +20,6 @@ Trudność Trafienia | Bez zbroi: ${cecha.refleks * 5} | Lekka zbroja: ${cecha.r
 Rany: ${krag.ziemia * 2} na poziom | Rany całość: ${krag.ziemia * 2 * 8}
 -------------------------------------------------------------------------`);
 
-console.log(printer);
+export const turboPrinter = () => {return printer};
+
+console.log(turboPrinter());
