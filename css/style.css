@@ -2,15 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Calibri", sans-serif;
 }
 
 header {
     text-align: center;
 }
 
-.underConstruction {
-    display: block;
-    margin: auto;
+.home-page{
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px solid black;
 
 }
 
@@ -18,52 +22,71 @@ body {
     margin: 80px;
     font-size: 36px;
     height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #045de9;
-    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    background-color: #8A787B;
 }
 
-table {
+table,
+td,
+th {
     border-spacing: 0;
-    font-size: 20px;
-}
-
-table, td, th {
+    font-size: 15px;
     border: 1px solid black;
 }
 
-td, th {
+td,
+th {
     padding: 5px 20px;
 }
 
-thead {
-    background-color: tomato;
-}
-
-tbody {
-    background-color: #fff;
-}
-
-tfoot {
-    background-color: royalblue;
-}
-
-table tr:first-child {
-    background-color: lime;
+table.fire tr:first-child {
+    background-color: #7F7C7C;
 }
 
 img.img-left {
     width: 300px;
+    /* height: 200px; */
     display: block;
-    /* width: 50%; */
+    width: 40%;
     margin-left: auto;
     /* margin-right: 20px; */
 }
 
 img.img-right {
-    width: 300px;
+    /* width: 300px; */
     display: block;
-    /* width: 50%; */
+    width: 40%;
     /* margin-left: 20px; */
     margin-right: auto;
+    border-radius: 50%;
 }
+
+.box1 {
+    width: 600px;
+    height: 600px;
+    background-color: #201A20;
+}
+
+.box2 {
+    width: 300px;
+    height: 300px;
+    background-color: #5F3739;
+    border-radius: 5%;
+}
+
+basicColors {
+    color: #EEF0EF;
+    color: #7F7C7C;
+    color: #5F3739;
+    color: #8A787B;
+    color: #201A20;
+}
+
+/* Właściwości dla tekstu:
+color: kolor czcionki
+text-align: wyrównanie do prawej, lewej, środka itd.
+text-decoration: podkreślenie, przekreślenie itd.
+text-transform: zmiana wielkości liter
+letter-spacing / word-spacing: odstęp pomiędzy literami / wyrazami
+line-height: wysokość linii, w której jest tekst
+direction: kierunek tekstu
+text-shadow: cień */
