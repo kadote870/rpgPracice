@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Calibri", sans-serif;
+    background-color: #a09889;
+}
+
+header {
+    text-align: center;
+    font-size: 350%;
+    background-color: #373555;
+}
+
+table.home-page{
+    margin-left: auto; 
+    margin-right: auto;
+    border: none
+}
+
+button{
+        width: 100px;
+        height: 50px;
+        background-color: #838a7f;
+}
+
+
+
+colgroup {
+  color: #f6f6f3;
+  color: #838a7f;
+  color: #a09889;
+  color: #7b7f96;
+  color: #373555;
+}
+
+
+
+
+
+/* Właściwości dla tekstu:
+color: kolor czcionki
+text-align: wyrównanie do prawej, lewej, środka itd.
+text-decoration: podkreślenie, przekreślenie itd.
+text-transform: zmiana wielkości liter
+letter-spacing / word-spacing: odstęp pomiędzy literami / wyrazami
+line-height: wysokość linii, w której jest tekst
+direction: kierunek tekstu
+text-shadow: cień
+font-size: 15px; */
