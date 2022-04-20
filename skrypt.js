@@ -1,12 +1,8 @@
-// import {turboPrinter} from "./l5r/npc.js";
-
-let npc = 2222
+// import {NPCprinter} from "./l5r/npc.js";
 
 function showMessage() {
-    document.getElementById('message').innerText = npc
+    
+    document.getElementById('message').innerText = 'prezydent duda czyni cuda'
+    // document.getElementById('message').innerText = NPCprinter();
 }
-
-
-
-
 
