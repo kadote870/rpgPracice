@@ -4,7 +4,7 @@ import {skillRandom} from "./modules/skills.js";
 import {name} from "./other/name.js";
 
 
-const printer = (`
+const npc = (`
 Random NPC: ${name}, ${ktoToJest}
 
 Ziemia: ${krag.ziemia} | Wytrzymałość: ${cecha.wytrzymalosc} | Siła Woli: ${cecha.silaWoli}
@@ -21,6 +21,6 @@ Trudność Trafienia | Bez zbroi: ${cecha.refleks * 5} | Lekka zbroja: ${cecha.r
 Rany: ${krag.ziemia * 2} na poziom | Rany całość: ${krag.ziemia * 2 * 8}
 -------------------------------------------------------------------------`);
 
-export const turboPrinter = () => {return printer};
+export const NPCprinter = () => {return npc};
 
-console.log(turboPrinter());
+console.log(NPCprinter());

@@ -45,7 +45,11 @@ const result = zip(splitAt(participants.length / 2, shuffle(participants)));
 //   [ 'Cotter', 'Pat' ],
 //   [ 'Emily', 'Jeremy' ]
 // ]
-console.log(result)
 
+const tablicaDlugosc = result.length -1
 
-
+let i = -1
+do {
+    i++;
+    console.log((i +1)  + ' : ' + result[i])
+} while (i < tablicaDlugosc);
