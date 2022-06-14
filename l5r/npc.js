@@ -5,7 +5,7 @@ import {name} from "./other/name.js";
 
 
 const npc = (`
-Random NPC: ${name}, ${ktoToJest}
+Random NPC: ${name()}, ${ktoToJest}
 
 Ziemia: ${krag.ziemia} | Wytrzymałość: ${cecha.wytrzymalosc} | Siła Woli: ${cecha.silaWoli}
 Ogień: ${krag.ogien} | Zręczność: ${cecha.zrecznosc} | Inteligencja: ${cecha.inteligencja}
@@ -21,6 +21,4 @@ Trudność Trafienia | Bez zbroi: ${cecha.refleks * 5} | Lekka zbroja: ${cecha.r
 Rany: ${krag.ziemia * 2} na poziom | Rany całość: ${krag.ziemia * 2 * 8}
 -------------------------------------------------------------------------`);
 
-export const NPCprinter = () => {return npc};
-
-console.log(NPCprinter());
+console.log(npc);
