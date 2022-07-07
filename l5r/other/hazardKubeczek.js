@@ -1,7 +1,7 @@
-import {roll_d6} from "../../roll/roll.js";
+import {dice_roll} from "../../roll/roll.js";
 
-const gambling1 = roll_d6();
-const gambling2 = roll_d6();
+const gambling1 = dice_roll(6);
+const gambling2 = dice_roll(6);
 const modulo = (gambling1 + gambling2) % 2;
 
 if (modulo === 0) {

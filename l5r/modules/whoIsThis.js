@@ -7,7 +7,7 @@ let ktoToTable;
 let klasa;
 let specjalistaTable;
 
-if (roll_d100() > 10) {
+if (dice_roll(100) > 10) {
     klanTable = ['Feniks', 'Jednorożec', 'Krab', 'Lew', 'Skorpion', 'Smok', 'Żuraw'];
 } else {
     klanTable = ['Borsuk', 'Lis', 'Modliszka', 'Osa', 'Ważka', 'Wróbel',
