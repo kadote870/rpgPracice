@@ -1,4 +1,4 @@
-import {roll_d100} from "../../roll/roll.js";
+import {dice_roll} from "../../roll/roll.js";
 
 export let ktoToJest;
 
@@ -16,7 +16,7 @@ if (roll_d100() > 10) {
 
 export let jakiKlan = klanTable[Math.floor(Math.random() * klanTable.length)];
 
-const ktoToJestRoll = roll_d100();
+const ktoToJestRoll = dice_roll(100);
 
 if (ktoToJestRoll < 5) {
     ktoToTable = ['Kami', 'Istota Metafizyczna', 'Fortuna'];
@@ -37,7 +37,7 @@ if (ktoToJestRoll < 5) {
 
 } else if (ktoToJestRoll < 45) {
     //Szlachcic
-    const roll = roll_d100();
+    const roll = dice_roll(100);
     if (roll < 10) {
         klasa = 'Shugenja';
     }
